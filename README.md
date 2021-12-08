@@ -10,15 +10,15 @@ Deep Learning model을 Web 상에 이식하여 이미지 특징 검색을 바탕
 git clone https://github.com/SSU-opensource-project/Deploy.git    
 
 ### 이미지 특징 Feature Map 다운. 
-다운로드 후 현 프로젝트 폴더의 main 폴더 내에 삽입.    
+다운로드 후 main 폴더 내에 삽입.    
 https://drive.google.com/file/d/1QqkhMAMvRbJV8gTq_u6C3Pj7-RefTZHo/view?usp=sharing    
 
 ### Pretrain 된 모델 다운
-압축 해제후 전체 폴더 main 폴더에 삽입     
+압축 해제 후  main 폴더 내에 삽입     
 https://drive.google.com/file/d/1DPydA0FpLYEHaFYDa8_oZAot_Ou5JefK/edit    
 
 ### 파이선 가상환경 설정 및 실행 방법. 
-* 활성화된 빈 가상환경 이 필요하다.     
+* 활성화된 빈 가상환경이 필요하다.     
 참고 링크 : https://dojang.io/mod/page/view.php?id=2470     
 
 1. manage.py 가 존재하는 directory로 이동     
