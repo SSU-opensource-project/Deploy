@@ -23,13 +23,13 @@ https://drive.google.com/file/d/1DPydA0FpLYEHaFYDa8_oZAot_Ou5JefK/edit
 
 1. manage.py 가 존재하는 directory로 이동     
 
-2. pip install -r requirement.txt    
+2. ``` pip install -r requirement.txt    ```
 
-3. python manage.py makemigrations     
+3. ``` python manage.py makemigrations     ```
 
-4. python manage.py migrate     
+4. ``` python manage.py migrate     ```
 
-5. python manage.py runserver     
+5. ``` python manage.py runserver    ``` 
 
 ### 실행 후 localhost에서 수행    
 1. 회원 가입 필수.     (제품 추천 제외) 
@@ -40,9 +40,11 @@ https://drive.google.com/file/d/1DPydA0FpLYEHaFYDa8_oZAot_Ou5JefK/edit
 1. User/migrations에 __init__.py 제외 전부 삭제    
 2. main/migrations에 __init__.py 제외 전부 삭제    
 3. 아래 명령어 차례대로 수행     
-    python manage.py makemigrations      
-    python manage.py migrate     
-    python manage.py runserver     
+   ```
+   python manage.py makemigrations      
+   python manage.py migrate     
+   python manage.py runserver     
+   ```
 
 ### 주의사항
 temp_media 폴더내 사진 삭제 시 DB오류 발생함.     
