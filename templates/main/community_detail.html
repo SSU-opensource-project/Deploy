@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"/>
+    <link rel="stylesheet" href="{% static 'css/common.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/community_detail.css' %}" />
+    <link rel="icon" href="{% static 'images/logo.png' %}" />
+
+    <title>이 옷 어디?</title>
+    </head>
+        <body>
+            <header>
+                <div class="inner">
+                    <a href="{% url 'main:mainpage' %}" class="logo">
+                    <img
+                        class="logoImg"
+                        src="{% static 'images/LogoImg.JPG' %}"
+                        alt="logoImg"
+                    />
+                    </a>
+
+                    <ul class="submenu">
+                        <li><a href="{% url 'main:mainpage' %}">제품 검색</a></li>
+                        <li><a href="{% url 'main:community' %}">커뮤니티</a></li>
+                        <li><a href="{% url 'main:rcmdpage' %}">제품 추천</a></li>
+                        <li><a href="{% url 'main:service_info' %}">서비스 소개</a></li>
+                      </ul>
+
+                    <ul class="usermenu">
+                        <li><a href="{% url 'main:mypage' %}">마이페이지</a></li>
+                <li><a href="{% url 'main:logout' %}">로그아웃</a></li>
+                    </ul>
+                </div>
+            </header>
+
+            <div class="inner__content">
+                <div class="postInfo">
+                        <img src="{% static 'images/profile_img.PNG' %}" class="writerImage">
+                    <div class="postInfoText">
+                        <p class="title">{{post.title}}</p>
+                        <div class="postWriterPubDateBox">
+                            <p class="writer">{{post.writer}}</p>
+                            <p class="pubDate">{{post.pub_date}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contentBox">
+                    <img src="{{post.cloth_image.url}}" class="imageBox">
+                    <div class="content">
+                        {{ post.body }}
+                       <!-- 올 가을에는 트렌치코트를 많이 못입은 것 같다.<br>
+                        그래서 겨울에도 입을 수 있는 트렌치코트가 없을까 생각해봤다. <br>
+                        인별그램을 보다가 양털이 붙어있는 트렌치코트를 입은 모델 사진이 있더라. <br>
+                        이거다! 겨울에 입을 수 있는 트렌치코트!<br>
+                        다들 이 스타일을 참고해봤으면 좋겠다!<br>-->
+                    </div>
+                </div>
+        
+            </div>
+
+                
+
+        </body>
+    </html>

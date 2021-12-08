@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" href="img/reposeidon_logo.png" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"/>
+    <link rel="stylesheet" href="{% static 'css/common.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/rcmdpage.css' %}" />
+    <script defer src="./js/mainpage.js"></script>
+    <link rel="icon" href="{% static 'images/logo.png' %}" />
+
+    <title>이 옷 어디?</title>
+
+    <style>
+    .pageInfo {
+        margin-top: 80px;
+        margin-bottom: 20px;
+        margin-left: 20px;
+    }
+
+    h1 {
+        font-size:30px;
+        font-weight: 700;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    p, h1, h2 {
+        color:#4A90E2;
+    }
+
+    .container {
+        text-align: center;
+        width: 90%;
+        height: 400px;
+        display:flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: #ffffff;
+        border-radius: 10px;
+        border: 3px solid #4A90E2;
+        padding: 20px;
+        overflow: scroll;
+        top:50%;
+        left:50%;
+        margin-left:50px;
+    }
+
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #edf4fc;
+        border-radius: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #aeccee;
+        border-radius: 5px;
+    }
+
+    .fashionItemBox {
+        width:345px;
+        height:298px;
+        text-decoration: none;
+        margin-bottom: 25px;
+    }
+
+    .outputImg {
+        width:250px;
+        height:280px;
+        border-radius: 5px;
+        vertical-align: top;
+        object-fit: cover;
+        border: 2px solid #92b9e6;
+        margin-left: 5px;
+        margin-top: 10px;
+
+
+    }
+    </style>
+    </head>
+        <body>
+            <header>
+                <div class="inner">
+                    <a href="{% url 'main:mainpage' %}" class="logo">
+                        <img
+                            class="logoImg"
+                            src="{% static 'images/LogoImg.JPG' %}"
+                            alt="logoImg"
+                        />
+                    </a>
+
+                    <ul class="submenu">
+                        <li><a href="{% url 'main:mainpage' %}">제품 검색</a></li>
+                        <li><a href="{% url 'main:community' %}">커뮤니티</a></li>
+                        <li><a href="{% url 'main:rcmdpage' %}">제품 추천</a></li>
+                        <li><a href="{% url 'main:service_info' %}">서비스 소개</a></li>
+                        </ul>
+
+                    <ul class="usermenu">
+                        <li><a href="{% url 'main:mypage' %}">마이페이지</a></li>
+                        <li><a href="{% url 'main:logout' %}">로그아웃</a></li>
+                    </ul>
+                </div>
+            </header>
+
+            <main>
+                <div class="inner__content">
+                    <div class="pageInfo">
+                        <h1>제품 추천</h1>
+                        <h2>이런 제품은 어떤가요? 회원님에게 어울리는 제품을 추천해드릴게요.</h2>
+                    </div>
+                    <div class="container">
+                      {% for result in results %}
+                            <img
+                            class="outputImg"
+                            src="{{ result.image }}"
+                            alt="logoImg"
+                            onclick="location.href='{{result.siteurl }}';"
+                            />
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </main>
+
+            <footer>
+                <img
+                class="footerImg"
+                src="{% static 'images/footer_text.png' %}"
+                alt="footerImage"
+                />
+            </footer>
+    </body>
+</html>

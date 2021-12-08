@@ -1,0 +1,109 @@
+/* 공통 css */
+body {
+    margin-top: 50px;
+    background-color: rgba(170,199,225,0.15);
+    line-height: 2;
+    font-size: 15px;
+    color: #356093;
+    position: relative;
+}
+  
+.inner {
+    width: 1280px;
+    margin: 0 auto;
+    position: relative;
+}
+  
+.inner__content {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+header {
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    border-bottom: 2px solid #AAC7E1;
+}
+  
+header > .inner {
+    height: 60px;
+}
+  
+header .logo {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 30px;
+    margin: auto 0;
+    text-decoration: none;
+}
+  
+header .logo .logoImg {
+    height: 50px;
+    margin-right: 5px;
+}
+
+header .submenu {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 230px;
+    margin: auto 0;
+}
+  
+header .submenu li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #4A90E2;
+}
+  
+header .submenu li a:hover {
+    font-weight: bolder;
+    color: #356093;
+}
+  
+header .submenu li + li {
+    margin-left: 37px;
+}
+  
+header .usermenu {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 30px;
+    margin: auto 0;
+}
+  
+header .usermenu li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #4A90E2;
+}
+  
+header .usermenu li a:hover {
+    font-weight: bolder;
+    color: #356093;
+}
+  
+header .usermenu li + li {
+    margin-left: 37px;
+}
+  
+.footerImg {
+    width: 350px;
+    height: 20px;
+    position: relative;
+    margin-top: 50px;
+    left: 450px;
+}

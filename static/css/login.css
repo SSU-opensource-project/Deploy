@@ -1,0 +1,106 @@
+body {
+  background-size: 100%;
+}
+
+h1 {
+  margin-top: 100px;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  color: #4A90E2;
+}
+
+.loginBox {
+position: absolute;
+width: 50%;
+height: 500px;
+border-radius: 15px;
+left: 18%;
+}
+  
+.login_id input {
+width: 470px;
+height: 45px;
+border-radius: 20px;
+margin-top: 30px;
+margin-left: 170px;
+padding: 0px 0px 0px 0px;
+border: solid 2px #5997e4;
+background-color: rgba(170, 199, 225, 0.5);
+color: #356093;
+text-align: center;
+font-size: 20px;
+color: transparent;
+text-shadow: 0 0 0 white;
+}
+
+::placeholder {
+color: #4b82c5;
+font-weight: bold;
+font-size: 15px;
+}
+
+input:focus {
+color: #4b82c5;
+outline: none;
+}
+
+input::-webkit-input-placeholder { 
+color: #4b82c5; 
+}
+  
+.login_pw input {
+width: 470px;
+height: 45px;
+border-radius: 20px;
+margin-top: 15px;
+margin-left: 170px;
+padding: 0px 0px 0px 0px;
+border: solid 2px #5997e4;
+background-color: rgba(170, 199, 225, 0.5);
+color: #356093;
+text-align: center;
+font-size: 20px;
+color: transparent;
+text-shadow: 0 0 0 white;
+}
+  
+.loginBtn input {
+background-color: #4A90E2;
+color: #ffffff;
+font-weight: bold;
+font-size: 20px;
+margin-top: 30px;
+width: 150px;
+height: 45px;
+text-align: center;
+margin-left: 340px;
+border-radius: 15px;
+outline: none;
+border: none;
+box-shadow: 1px 1px 5px rgb(44, 44, 44);
+cursor: pointer;
+}
+  
+.notYetText {
+color: #356093;
+font-size: 15px;
+margin-top: 60px;
+margin-left: 260px;
+font-weight: bold;
+}
+  
+.gotoSignUp {
+color: #4A90E2;
+font-size: 18px;
+font-weight: bold;
+margin-left: 170px;
+position: absolute;
+top: 275px;
+left: 310px;
+cursor: pointer;
+}
+
+.footerImg {
+  top: 350px;
+}

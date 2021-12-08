@@ -1,0 +1,80 @@
+.pageInfo {
+    margin-top: 80px;
+    margin-bottom: 20px;
+}
+
+.container {
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.fashionItemBox {
+    width:345px;
+    height:298px;
+    text-decoration: none;
+    margin-bottom:10px;
+}
+
+.fashionItemBoxText {
+    flex-direction: column;
+    padding-left:10px;
+}
+
+.fashionImage {
+    width:345px;
+    height:200px;
+    border-radius: 5px;
+    vertical-align: top;
+    border: 2px solid #81afe4;
+}
+
+.writerImage {
+    border-radius:100%;
+    width:45px;
+    height:45px;
+}
+
+.fashionInfo {
+    width:354px;
+    height:90px;
+    display:flex;
+    flex-direction: row;
+    padding-top:10px;
+}
+
+h1 {
+    font-size:30px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+p, h1, h2 {
+    color:#4A90E2;
+    margin-top: -8px;
+}
+
+.postButton {
+    width: 150px;
+    display:flex;
+    flex-direction: row;
+}
+
+.title {
+    font-size:15px;
+    font-weight: bold;
+}
+
+.writer {
+    color:#4A90E2;
+    font-size:12px;
+}
+
+.pubDate {
+    color:#4A90E2;
+    font-size:12px;
+}

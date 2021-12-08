@@ -1,0 +1,98 @@
+.content_section {
+    float: left;
+    margin: 50px 50px auto 150px;
+    width: 20%;
+}
+
+/* .content_section .profile_section {
+    float: left;
+} */
+
+.content_section .profileImg {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.content_section .profile_info_section .editBtn {
+    border: none;
+    outline: none;
+    background: none;
+    margin-left: 150px;
+}
+
+.content_section .profile_info_section .editInfo_btnImg {
+    width: 100px;
+}
+
+.content_section .profile_info_section {
+    font-weight: 500;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.content_section .profile_info_section b{
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.history_section .search_box {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 220px 220px 220px;
+    margin-top: 50px;
+    width: 55%;
+    height: 450px;
+    float: left;
+    border: 2px solid #4A90E2;
+    background-color: #ffffff;
+    overflow:scroll;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+   
+  ::-webkit-scrollbar-track {
+    background: #edf4fc;
+    border-radius: 5px;
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: #aeccee;
+    border-radius: 5px;
+  }
+
+.history_section .search_box .exImg {
+    display: flex;
+    flex-direction: row;
+    width: 190px;
+    height: 250px;
+    object-fit: cover;
+    margin-top: 10px;
+    margin-left: 30px;
+    border-radius: 10px;
+    border: 2px solid #94c0f1;
+}
+
+.history_section .search_box .deleteBtn {
+    position: relative;
+    top: -250px;
+    left: 90px;
+    
+    width: 22px;
+    height: 22px;
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #4A90E2;
+
+    box-shadow: 0.3px 0.3px 0.3px #000;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+}
+
+.footerImg {
+    text-align: center;
+}

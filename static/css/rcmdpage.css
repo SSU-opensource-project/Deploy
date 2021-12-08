@@ -1,0 +1,65 @@
+.pageInfo {
+    margin-top: 80px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+h1 {
+    font-size:30px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+p, h1, h2 {
+    color:#4A90E2;
+}
+
+.container {
+    text-align: center;
+    width: 90%;
+    height: 400px; 
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 3px solid #4A90E2;
+    padding: 20px;
+    overflow: scroll;
+    top:50%; 
+    left:50%;
+    margin-left:50px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+   
+  ::-webkit-scrollbar-track {
+    background: #edf4fc;
+    border-radius: 5px;
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: #aeccee;
+    border-radius: 5px;
+  }
+
+.fashionItemBox {
+    width:345px;
+    height:298px;
+    text-decoration: none;
+    margin-bottom: 25px;
+}
+
+.fashionImage {
+    width:300px;
+    height:300px;
+    border-radius: 5px;
+    vertical-align: top;
+    object-fit: cover;
+}

@@ -1,0 +1,10 @@
+body {
+    background-size: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.serviceInfo_img {
+    width: 60%;
+    margin-top: 30px;
+}

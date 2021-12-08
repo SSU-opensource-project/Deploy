@@ -1,0 +1,25 @@
+로그인 페이지
+{% if user.is_authenticated %}
+    #dlr
+    {{ user.username}} hi
+    <a href = "User:logout" > log out</a>
+{% else %}
+
+{% extends 'base_.html' %}
+{% block title %} 로그인 {% endblock %}
+{% block page %}login{% endblock %}
+{% block content %}
+<div style = "padding-left:50px; padding-top:50px;">
+    <h1>Login</h1>
+    <hr>
+    <form method = "post" action = "{% url 'login' %}">
+        {%csrf_token%}
+        <input type = "hidden" name = "next" value = "">
+        {{form.as_p}}
+        <button class = "btn btn-primary" type = "submit">로그인</button>
+    </form>
+</div>
+
+     <a href = "{% url 'User:register' %}" > 회원가입</a>
+{% endif %}
+{% endblock %}

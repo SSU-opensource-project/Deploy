@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" href="img/reposeidon_logo.png" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"/>
+    <link rel="stylesheet" href="{% static 'css/common.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/showpage.css' %}" />
+    <link rel="icon" href="{% static 'images/logo.png' %}" />
+
+    <title>이 옷 어디?</title>
+    </head>
+        <body>
+            <header>
+                <div class="inner">
+                    <a href="{% url 'main:mainpage' %}" class="logo">
+                    <img
+                        class="logoImg"
+                        src="{% static 'images/LogoImg.JPG' %}"
+                        alt="logoImg"
+                    />
+                    </a>
+
+                    <ul class="submenu">
+                        <li><a href="{% url 'main:mainpage' %}">제품 검색</a></li>
+                        <li><a href="{% url 'main:community' %}">커뮤니티</a></li>
+                        <li><a href="{% url 'main:rcmdpage' %}">제품 추천</a></li>
+                        <li><a href="{% url 'main:service_info' %}">서비스 소개</a></li>
+                      </ul>
+
+                    <ul class="usermenu">
+                      <li><a href="{% url 'main:mypage' %}">마이페이지</a></li>
+                    <li><a href="{% url 'main:logout' %}">로그아웃</a></li>
+                    </ul>
+                </div>
+            </header>
+
+            <main>
+               <div class="username_section">
+                   <div class="username">
+                      {{ Username }}
+                   </div>
+
+                   <div class="text_info">
+                       님의 이미지 검색 결과입니다.
+                   </div>
+               </div>
+
+               <div class="content_section">
+                   <div class="inputElement_section">
+                        <img
+                            class="inputImg"
+                            src="{{myImage.image.url}}"
+                            alt="logoImg"
+                        />
+                   </div>
+                   <div class="outputElement_section">
+                        <div class="outputElement_box">
+                            {% for result in results %}
+                            <img
+                            class="outputImg"
+                            src="{{ result.image }}"
+                            alt="logoImg"
+                            onclick="location.href='{{result.siteurl}}'"
+                            />
+                            {% endfor %}
+
+                           <!-- <img
+                            class="outputImg"
+                            src="./img/showPage_outputImg.JPG"
+                            alt="logoImg"
+                            />
+                            <img
+                            class="outputImg"
+                            src="./img/showPage_outputImg.JPG"
+                            alt="logoImg"
+                            />
+                            <img
+                            class="outputImg"
+                            src="./img/showPage_outputImg.JPG"
+                            alt="logoImg"
+                            />
+                            <img
+                            class="outputImg"
+                            src="./img/showPage_outputImg.JPG"
+                            alt="logoImg"
+                            />
+                            <img
+                            class="outputImg"
+                            src="./img/showPage_outputImg.JPG"
+                            alt="logoImg"
+                            />
+                            <img
+                            class="outputImg"
+                            src="./img/showPage_outputImg.JPG"
+                            alt="logoImg"
+                            />
+                            <img
+                            class="outputImg"
+                            src="./img/showPage_outputImg.JPG"
+                            alt="logoImg"
+                            />-->
+                        </div>
+                   </div>
+               </div>
+            </main>
+
+            <footer>
+                <img
+                class="footerImg"
+                src="{% static 'images/footer_text.png' %}"
+                alt="footerImage"
+                />
+            </footer>
+    </body>
+</html>
