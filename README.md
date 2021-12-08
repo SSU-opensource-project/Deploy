@@ -37,14 +37,13 @@ https://drive.google.com/file/d/1DPydA0FpLYEHaFYDa8_oZAot_Ou5JefK/edit
 3. 검색 결과 출력, 이미지 클릭시 판매자 링크로 이동함.     
 
 ### migration 오류 발생시 대처사항
-1. User/migrations에 __init__.py 제외 전부 삭제    
-2. main/migrations에 __init__.py 제외 전부 삭제    
+1. ```User/migrations```에 ```__init__.py``` 제외 전부 삭제    
+2. ```main/migrations```에 ```__init__.py``` 제외 전부 삭제    
 3. 아래 명령어 차례대로 수행     
-   ```
-   python manage.py makemigrations      
-   python manage.py migrate     
-   python manage.py runserver     
-   ```
+   ```python manage.py makemigrations```      
+   ```python manage.py migrate```     
+   ```python manage.py runserver ```    
+   
 
 ### 주의사항
 temp_media 폴더내 사진 삭제 시 DB오류 발생함.     
